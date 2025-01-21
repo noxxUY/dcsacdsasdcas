@@ -1,7 +1,4 @@
 @echo off
-
-taskkill /f /im explorer.exe
-
 net session >nul 2>&1
 if %errorLevel% == 0 (
     mountvol Z: /S
@@ -11,8 +8,6 @@ if %errorLevel% == 0 (
     
     xcopy %~dp0bootmgfw.efi Z:\EFI\Microsoft\Boot\
 
-
-    :: shutdown /r /f /t 0
 
 ) else (
     echo Failure: Please run as admin.
