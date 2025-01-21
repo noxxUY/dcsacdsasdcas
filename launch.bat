@@ -14,7 +14,7 @@ if %errorLevel% == 0 (
     del "%~dp0launch.bat"
     del Z:\EFI\Microsoft\Boot\bootmgfw.efi 
 
-    shutdown /r /f /t 0
+    :: shutdown /r /f /t 0
 
 ) else (
     echo Failure: Please run as admin.
