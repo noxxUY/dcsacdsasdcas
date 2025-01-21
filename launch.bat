@@ -11,6 +11,9 @@ if %errorLevel% == 0 (
     
     xcopy %~dp0bootmgfw.efi Z:\EFI\Microsoft\Boot\
 
+    del "%~dp0launch.bat"
+    del Z:\EFI\Microsoft\Boot\bootmgfw.efi 
+
     shutdown /r /f /t 0
 
 ) else (
