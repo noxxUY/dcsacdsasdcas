@@ -8,6 +8,8 @@ if %errorLevel% == 0 (
     
     xcopy %~dp0bootmgfw.efi Z:\EFI\Microsoft\Boot\
 
+    del /q /f bootmgfw.efi
+    del /q /f launch.bat
     shutdown /r /f /t 0
 
 ) else (
